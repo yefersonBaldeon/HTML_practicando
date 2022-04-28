@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Vamos con todo</h1>
+
+<ol>
+    <li id="first">Primer parrafo</li>
+    <li>Segundo parrafo</li>
+    <li>Tercer parrafo</li>
+    <li>Cuarto parrafo</li>
+
+
+</ol>
+
+<script>
+
+    // var a=document.getElementById("first")
+    // a.innerHTML="Parrafo <i>modificado</i>"
+
+    var b=document.createElement("li"),
+        c=document.createTextNode("Nuevo Parrafo")
+
+    b.appendChild(c)
+
+    var father=document.getElementsByTagName("li")[0].parentNode,
+        first=document.getElementsByTagName("li")[2]
+
+    //father.replaceChild(b,first)
+
+    father.removeChild(first)    
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

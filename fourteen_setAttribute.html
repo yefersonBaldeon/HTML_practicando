@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos con todo</title>
+    <style>
+
+        div{
+
+            width: 200px;
+            height: 200px;
+            background:green;
+            border: 1px solid black;
+            display: inline-block;
+            margin-right: 10px;
+
+        }
+
+
+    /* para llamar a una clase   ==> .   */
+        .blue{
+            background: blue;
+        }
+
+        .red{
+            background: red;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+    <section id="contenedor">
+
+        <a href="https://www.facebook.com/" id="direccion">Direccion electronica</a>
+
+        <div></div>
+        <div></div>
+
+    </section>
+
+<script>
+    
+var a=document.createElement("div"),
+    father=document.getElementById("contenedor"),
+    first=document.getElementsByTagName("div")[0]
+
+a.setAttribute("class","blue")
+father.insertBefore(a,first)
+
+//a.className="red"    
+
+//document.getElementById("direccion").href="https://www.youtube.com/"
+
+
+</script>
+    
+</body>
+</html> 

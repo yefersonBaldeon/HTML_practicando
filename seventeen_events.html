@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos con todo</title>
+</head>
+<body>
+    
+<form action="">
+
+
+    <button id="boton">BOTON</button>
+    <input type="text"  id="ingresar">
+
+    <br><br>
+
+    <button id="boton2">BOTON2</button>
+
+</form>
+<br><br>
+    <a href="https://www.youtube.com/" id="referencia">LINK</a>
+
+
+    <script>
+
+        function imprimir(){
+            alert("vamos con todo 2")
+            }
+
+        function imprimir2(){
+            console.log("focus")
+            }   
+
+        var a=document.getElementById("boton")
+        // a.addEventListener("click",function(){
+        //     alert("vamos con todo 2")
+        // })
+
+        a.addEventListener("click",imprimir)  
+        
+        var b=document.getElementById("ingresar")
+
+        //b.addEventListener("focus",imprimir2)    
+       
+        b.addEventListener("change",imprimir2)    
+
+
+        //    ===========================  PARA VER EL TIPO DE EVENTO 
+
+        function imprimir3(e){
+            alert("El tipo de funcion es: "+e.type)
+        }    
+
+        var c=document.getElementById("boton2")
+        c.addEventListener("click",imprimir3)
+
+        //    ===========================  PREVENIR EL EVENTO 
+
+        function imprimir4(e){
+            console.log("se abrio el link")
+            e.preventDefault()
+        }    
+
+        var d=document.getElementById("referencia")
+        d.addEventListener("click",imprimir4)
+
+    </script>
+
+
+
+
+
+</body>
+</html>

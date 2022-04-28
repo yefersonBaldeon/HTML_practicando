@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Vamos con todo</h1>
+
+<ol>
+    <li>Primer parrafo</li>
+    <li>Segundo parrafo</li>
+    <li>Tercer parrafo</li>
+</ol>
+
+<script>
+
+    var a=document.createElement("li"),
+        b=document.createTextNode("nuevo parrafo")
+
+
+    a.appendChild(b)
+        
+    var father=document.getElementsByTagName("li")[0].parentNode
+    
+  //  father.append(a)
+
+  var first=document.getElementsByTagName("li")[2]
+
+father.insertBefore(a,first)
+
+</script>
+
+
+</body>
+</html>

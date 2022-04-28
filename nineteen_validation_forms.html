@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos con todo</title>
+</head>
+<body>
+    
+<form action="" name="formulario">
+
+    <input type="text" name="nombre" placeholder="Escribir el nombre">
+    <br>
+    
+    <input type="radio" name="sexo" value="hombre">HOMBRE 
+    <input type="radio" name="sexo" value="mujer">MUJER
+    <br>
+    
+    <input type="checkbox" name="condiciones"  value="Terminos y condiciones">Terminos y condiciones
+    <br>
+    
+    <input type="submit" name="enviar" value="ENVIAR" id="boton">
+
+</form>
+
+
+
+<script>
+
+
+function validar_nombre(e){
+
+    //  forumlario.nombre == documemt.formulario.nombre
+    if(formulario.nombre.value==0){
+    alert("Complete el campo nombre")
+    e.preventDefault()
+    }
+}
+
+
+function validar_radio(e){
+
+    //formulario.sexo[0].checked
+
+    if(formulario.sexo.value ==""){
+    alert("Complete el campo sexo")
+    e.preventDefault()
+    }
+}
+
+function validar_terminos(e){
+
+
+if(formulario.condiciones.checked ==false){
+alert("Complete los terminos y condiciones")
+e.preventDefault()
+}
+}
+
+
+function validar(e){
+    validar_nombre(e)
+    validar_radio(e)
+    validar_terminos(e)
+}
+
+
+// El submit solo trabaja con FORM
+formulario.addEventListener("submit",validar)
+
+</script>
+
+</body>
+</html>

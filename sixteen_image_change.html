@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos con todo</title>
+
+<style>
+
+.normally{
+
+    width: 200px;
+    transition: 500ms ;
+
+}
+
+.big{
+    width: 400px;
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+    
+<img id="imagen" class="normally"  src="images/descarga.png" alt="">
+
+<form action="">
+
+    <input type="button"  value="image change" onclick="change()">
+</form>
+
+
+<script>
+
+function change(){
+
+    var a=document.getElementById("imagen")
+    if(a.className=="normally")
+        a.className="normally big"     
+     
+    else
+        a.className="normally"     
+
+}
+
+</script>
+
+
+
+</body>
+</html>
